@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C038C93-C059-42ED-A4FF-4815B32CF2AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>metalAssistor</RootNamespace>
+    <AssemblyName>metalAssistor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetPlatformVersion>10.0</TargetPlatformVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc">
+      <HintPath>lib\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf">
+      <HintPath>lib\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS">
+      <HintPath>lib\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="entity\GuaranteeTaskBean.cs" />
+    <Compile Include="entity\SclerometerTaskBean.cs" />
+    <Compile Include="entity\SubTaskBean.cs" />
+    <Compile Include="entity\FilmBean.cs" />
+    <Compile Include="entity\InfoBean.cs" />
+    <Compile Include="entity\SclerometerBean.cs" />
+    <Compile Include="entity\TaskBean.cs" />
+    <Compile Include="entity\UniversalBean.cs" />
+    <Compile Include="entity\WedgeTaskBean.cs" />
+    <Compile Include="form\ChangeCheckUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChangeCheckUnitForm.Designer.cs">
+      <DependentUpon>ChangeCheckUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ChangeGuaranteeTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChangeGuaranteeTaskForm.designer.cs">
+      <DependentUpon>ChangeGuaranteeTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ChangeWedgeTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChangeWedgeTaskForm.designer.cs">
+      <DependentUpon>ChangeWedgeTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ChangeSclerometerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChangeSclerometerForm.Designer.cs">
+      <DependentUpon>ChangeSclerometerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ChangeSubTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChangeSubTaskForm.Designer.cs">
+      <DependentUpon>ChangeSubTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CreateWedgeTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CreateWedgeTaskForm.designer.cs">
+      <DependentUpon>CreateWedgeTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CreateGuaranteeTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CreateGuaranteeTaskForm.designer.cs">
+      <DependentUpon>CreateGuaranteeTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CreateSclerometerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CreateSclerometerForm.Designer.cs">
+      <DependentUpon>CreateSclerometerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CreateSubTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CreateSubTaskForm.Designer.cs">
+      <DependentUpon>CreateSubTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\CreateTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CreateTaskForm.Designer.cs">
+      <DependentUpon>CreateTaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HttpUtil\Constant.cs" />
+    <Compile Include="HttpUtil\HttpClient.cs" />
+    <Compile Include="HttpUtil\KeyValue.cs" />
+    <Compile Include="HttpUtil\LoginMode.cs" />
+    <Compile Include="HttpUtil\ResultMode.cs" />
+    <Compile Include="HttpUtil\WebAPI.cs" />
+    <Compile Include="LoginFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFormNew.designer.cs">
+      <DependentUpon>LoginFormNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="server\Util.cs" />
+    <Compile Include="util\ExcelUtil.cs" />
+    <Compile Include="util\TaskCache.cs" />
+    <Compile Include="util\TaskTypeUtil.cs" />
+    <Compile Include="util\Test.cs" />
+    <Compile Include="util\WordUtil.cs" />
+    <EmbeddedResource Include="form\ChangeCheckUnitForm.resx">
+      <DependentUpon>ChangeCheckUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ChangeGuaranteeTaskForm.resx">
+      <DependentUpon>ChangeGuaranteeTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ChangeWedgeTaskForm.resx">
+      <DependentUpon>ChangeWedgeTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ChangeSclerometerForm.resx">
+      <DependentUpon>ChangeSclerometerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ChangeSubTaskForm.resx">
+      <DependentUpon>ChangeSubTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CreateWedgeTaskForm.resx">
+      <DependentUpon>CreateWedgeTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CreateGuaranteeTaskForm.resx">
+      <DependentUpon>CreateGuaranteeTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CreateSclerometerForm.resx">
+      <DependentUpon>CreateSclerometerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CreateSubTaskForm.resx">
+      <DependentUpon>CreateSubTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\CreateTaskForm.resx">
+      <DependentUpon>CreateTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFormNew.resx">
+      <DependentUpon>LoginFormNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuowu2.png" />
+    <Content Include="Resources\FolderClosed.png" />
+    <Content Include="Resources\FolderOpen.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
